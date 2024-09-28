@@ -1,0 +1,60 @@
+{
+    "bundles": [
+        {
+            "name": "home",
+            "assets": [
+                {
+                    "name": "background_home",
+                    "srcs": "./assets/image/home/background.jpg"
+                }
+            ]
+        },
+        {
+        "name": "ace_of_shadows",
+            "assets": [
+                {
+                    "name": "background_aos",
+                    "srcs": "./assets/image/ace_of_shadows/background.jpg"
+                },
+                {
+                    "name": "card",
+                    "srcs": "./assets/image/ace_of_shadows/card.png"
+                }
+            ]
+        },
+        {
+        "name": "magic_words",
+            "assets": [
+                {
+                    "name": "background_mw",
+                    "srcs": "./assets/image/magic_words/background.jpg"
+                },
+                {
+                    "name": "icon_0",
+                    "srcs": "./assets/image/magic_words/avatar-icon.jpg"
+                },
+                {
+                    "name": "icon_1",
+                    "srcs": "./assets/image/magic_words/fashion-icon.png"
+                },
+                {
+                    "name": "icon_2",
+                    "srcs": "./assets/image/magic_words/heart-icon.png"
+                },
+                {
+                    "name": "icon_3",
+                    "srcs": "./assets/image/magic_words/star-icon.png"
+                }
+            ]
+        },
+        {
+        "name": "phoenix_flame",
+            "assets": [
+                {
+                    "name": "background_pf",
+                    "srcs": "./assets/image/phoenix_flame/background.jpg"
+                }
+            ]
+        }
+    ]
+}
