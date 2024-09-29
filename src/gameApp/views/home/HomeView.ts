@@ -26,12 +26,6 @@ export class HomeView extends BaseView {
         super.show();
     }
 
-    protected init() {
-        super.init();
-
-        
-    }
-
     private createButtons() {
         this.btnsContainer = new PIXI.Container();
 

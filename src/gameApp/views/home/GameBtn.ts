@@ -37,15 +37,14 @@ export class GameBtn extends BaseButton {
         this.background.endFill();
 
         const dropShadowFilter = new DropShadowFilter({
-            color: 0x000000, // Shadow color (black)
-            alpha: 0.6,      // Shadow opacity
-            blur: 4,         // How blurry the shadow is
-            distance: 5,     // Distance of the shadow from the object
-            rotation: 45,    // Shadow angle (in degrees)
-            quality: 5       // Number of blur iterations
+            color: 0x000000, 
+            alpha: 0.6,     
+            blur: 4,         
+            distance: 5,     
+            rotation: 45,   
+            quality: 5      
         });
         
-        // Apply the filter to the graphics object
         this.background.filters = [dropShadowFilter];
 
         this.addChild(this.background);

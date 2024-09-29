@@ -69,6 +69,9 @@ export class PhoenixFlameGame extends BaseView {
         this.homeBtn?.destroy();
         this.homeBtn = null;
 
+        this.fireFilter?.destroy();
+        this.fireFilter = null;
+
         AssetManager.instance.unloadAssetBundle(this.id);
     }
 

@@ -19,15 +19,28 @@ export class Application extends PIXI.Application {
 
     private resizeTimeoutId: NodeJS.Timeout;
 
+    /**
+     * Private constructor to prevent direct instantiation.
+     * Sets up the application and adds the main container.
+     * @private
+     */
     constructor() {
         super(Application.getAppOptions());
         this.init();
     }
 
+    /**
+     * Returns the singleton instance of the application.
+     * @returns {Application} The singleton application instance.
+     */
     public static get app(): Application {
         return this._app;
     }
 
+    /**
+     * Retrieves the current window size dimensions.
+     * @returns {WindowSize} The current width and height of the window.
+     */
     public static get windowSizes(): WindowSize {
         return {
             width: window.visualViewport.width,
@@ -35,6 +48,10 @@ export class Application extends PIXI.Application {
         }
     }
 
+    /**
+     * Initializes the application by setting up the main container and event listeners.
+     * @private
+     */
     private init() {
         Application._app = this;
         (globalThis as any).__PIXI_APP__ = this;
@@ -55,11 +72,20 @@ export class Application extends PIXI.Application {
         };
     }
 
+    /**
+     * Creates and adds the game application to the main container.
+     * @private
+     */
     private createApp() {
         this.pageApp = new GameApp();
         this.mainContainer.addChild(this.pageApp);
     }
 
+    /**
+     * Returns the options used to configure the PIXI application.
+     * @private
+     * @returns {object} The configuration options for the PIXI application.
+     */
     private static getAppOptions() {
         return {
             backgroundColor: 0x2b2b2a,
@@ -71,6 +97,11 @@ export class Application extends PIXI.Application {
         }
     }
 
+    /**
+     * Handles window resize events and resizes the application accordingly.
+     * The resize event is debounced to prevent excessive calls.
+     * @private
+     */
     private onResize() {
 
         clearTimeout(this.resizeTimeoutId);

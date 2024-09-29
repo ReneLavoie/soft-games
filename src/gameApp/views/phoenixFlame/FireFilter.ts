@@ -2,7 +2,7 @@ import * as PIXI from 'pixi.js';
 
 export class FireFilter extends PIXI.Filter {
     constructor(width : number, height: number) {
-        // Vertex shader (standard for PixiJS filters)
+        // Vertex shader 
         const vertexShader = `
             attribute vec2 aVertexPosition;
             attribute vec2 aTextureCoord;
